@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  text-bot:
+    build: .
+    container_name: text-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
